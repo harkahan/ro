@@ -36,12 +36,12 @@ public class Labyrinthe {
 
     public void setStart(int x, int y) {
         this.lab[x][y] = 3;
-        start = new Case(x, y, "start");
+        start = new Case(x, y);
     }
 
     public void setEnd(int x, int y) {
         this.lab[x][y] = 4;
-        end = new Case(x, y, "end");
+        end = new Case(x, y);
     }
 
     public int[][] getArrayFromLab() {
@@ -70,5 +70,33 @@ public class Labyrinthe {
             return false;
         }
 
+    }
+    public boolean isUpPossible(Case param){
+        if (param.getX() > 0 && param.getY() >= 0) {
+            return lab[param.getX()-1][param.getY()] != 1;
+        } else {
+            return false;
+        }
+    }
+    public boolean isDownPossible(Case param){
+        if (param.getX() >= 0 && param.getY() >= 0) {
+            return lab[param.getX()+1][param.getY()] != 1;
+        } else {
+            return false;
+        }
+    }
+    public boolean isLeftPossible(Case param){
+        if (param.getX() >= 0 && param.getY() > 0) {
+            return lab[param.getX()][param.getY()-1] != 1;
+        } else {
+            return false;
+        }
+    }
+    public boolean isRightPossible(Case param){
+        if (param.getX() >= 0 && param.getY() >= 0) {
+            return lab[param.getX()][param.getY()+1] != 1;
+        } else {
+            return false;
+        }
     }
 }

@@ -1,8 +1,9 @@
 package application;
 
+import algo.Bfs;
 import common.lab.Labyrinthe;
 import common.lab.ShowLab;
-import exploration.bfs.BFS;
+import common.exploration.Action;
 
 public class App {
 
@@ -30,16 +31,8 @@ public class App {
         ShowLab sl = new ShowLab(lab1);
         sl.show();
 
-        BFS exploration = new BFS(lab1);
-
-        exploration.moveUp();
-        exploration.moveRight();
-        exploration.moveRight();
-        exploration.moveRight();
-
-        System.out.println(exploration.tree.toString());
-        //exploration.moveUp();
-        //exploration.moveUp();
+        Bfs test = new Bfs(lab1);
+        test.resolve();
 
     }
 }

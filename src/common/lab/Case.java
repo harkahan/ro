@@ -1,11 +1,10 @@
 package common.lab;
 
 public class Case {
-    String name;
     int x;
     int y;
 
-    public Case(int x, int y, String type) {
+    public Case(int x, int y) {
         this.x = x;
         this.y = y;
 
@@ -29,5 +28,10 @@ public class Case {
 
     public String toString() {
         return "posX : " + x + " posY : " + y;
+    }
+
+
+    public boolean equalsCase(int x,int y) {
+        return (x==this.x && y==this.y);
     }
 }

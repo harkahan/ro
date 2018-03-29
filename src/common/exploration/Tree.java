@@ -3,7 +3,7 @@ package common.exploration;
 import java.util.LinkedList;
 
 public class Tree {
-    LinkedList<Node> tree;
+    public LinkedList<Node> tree;
     int cursor;
 
     public Tree(Node startingPoint) {

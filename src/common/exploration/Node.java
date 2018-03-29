@@ -6,8 +6,8 @@ import common.lab.Case;
  * @author Florian Hondeville
  * @version 0.1
  * Class Node helps to represent a node in the search tree
- * @see exploration.bfs.BFS
- * @see exploration.dfs.DFS
+ * @see Action
+ * @see algo.dfs.DFS
  */
 public class Node {
 
